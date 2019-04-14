@@ -1,0 +1,16 @@
+language: java
+jdk:
+  - oraclejdk8
+
+branches:
+  only:
+    - master
+
+# Attivated Cache on Travis CI 
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+# clean 후 Build
+script: "./gradlew clean build"
