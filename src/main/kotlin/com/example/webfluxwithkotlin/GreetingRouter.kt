@@ -10,6 +10,7 @@ public class GreetingRouter(private val handler: GreetingHandler) {
     
     @Bean
     fun route() = router {
+        GET("/", handler::index)
         GET("/hello", handler::hello) 
     }
 }
