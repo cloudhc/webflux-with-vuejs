@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 @Component
-public class GreetingHandler {
+class GreetingHandler {
 
     fun index(request: ServerRequest) : Mono<ServerResponse> {
         return ServerResponse.ok().contentType(MediaType.TEXT_HTML)
